@@ -128,38 +128,6 @@
 </section>
 
 
-<section class="impact-strip">
-  <div class="shell impact-grid">
-
-    <div>
-      <strong>≈1 min</strong>
-      <span>client workload</span>
-    </div>
-
-    <div>
-      <strong>4</strong>
-      <span>guided photos</span>
-    </div>
-
-    <div>
-      <strong>0</strong>
-      <span>app installs</span>
-    </div>
-
-    <div>
-      <strong>0</strong>
-      <span>client cloud accounts</span>
-    </div>
-
-    <div>
-      <strong>LOCAL</strong>
-      <span>longitudinal record</span>
-    </div>
-
-  </div>
-</section>
-
-
 <section class="statement">
   <div class="shell statement-grid">
 
@@ -326,64 +294,6 @@
 </section>
 
 
-<section class="section shell monitoring-protocol">
-
-  <div class="heading">
-    <div>
-      <p class="eyebrow">IN-SERVICE PROTOCOL</p>
-      <h2>Monitoring changes with the moment.</h2>
-    </div>
-
-    <p>
-      A new device deserves more attention than an established one.
-      FootLabOS changes the cadence as the client moves from baseline
-      through first wear and into established use.
-    </p>
-  </div>
-
-  <div class="cadence-grid">
-
-    <article>
-      <span>BASELINE</span>
-      <strong>Daily</strong>
-      <p>
-        Build the longitudinal starting point before design decisions
-        depend on a stale snapshot.
-      </p>
-    </article>
-
-    <article class="cadence-hot">
-      <span>FIRST WEAR</span>
-      <strong>High attention</strong>
-      <p>
-        Device, shoe, skin, comfort and client feedback are watched
-        together as the insert enters real life.
-      </p>
-    </article>
-
-    <article>
-      <span>ESTABLISHED</span>
-      <strong>Weekly</strong>
-      <p>
-        Lower-friction continuity while preserving the ability to
-        tighten cadence when something meaningfully changes.
-      </p>
-    </article>
-
-    <article>
-      <span>CHANGE</span>
-      <strong>Re-baseline</strong>
-      <p>
-        New shoe. New device. Structural change. New pressure pattern.
-        Significant change means the system deserves another look.
-      </p>
-    </article>
-
-  </div>
-
-</section>
-
-
 <section class="section shell" id="bilateral">
 
   <div class="two-col">
@@ -454,49 +364,6 @@
         </div>
 
       </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="section founder-section">
-
-  <div class="shell founder-grid">
-
-    <div class="founder-label">
-      <p class="eyebrow">WHY THIS EXISTS</p>
-      <span>FOUNDER / LIVED EXPERIENCE</span>
-    </div>
-
-    <div class="founder-story">
-
-      <h2>
-        Built from living the gap
-        between a device and real life.
-      </h2>
-
-      <p class="founder-lead">
-        FootLabOS did not start as a software exercise.
-        It came from living through bilateral foot risk,
-        repeated procedures, ulcers, amputations, changing structure
-        and changing load — while seeing how much of the real work
-        happens outside the exam room.
-      </p>
-
-      <blockquote>
-        “The device cannot be the end of the conversation.
-        The real work starts when the client goes home and wears it.”
-      </blockquote>
-
-      <p>
-        The mission is not to replace the care team.
-        It is to build the support system around the person:
-        simple check-ins, longitudinal evidence, manufacturing,
-        follow-through and a better feedback loop between visits.
-      </p>
 
     </div>
 
@@ -596,107 +463,6 @@
       <div>
         <strong>Cloud is replaceable</strong>
         <span>Messaging is transport, not authority.</span>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="section proof-section">
-
-  <div class="shell">
-
-    <div class="heading">
-
-      <div>
-        <p class="eyebrow">BLOCKZERO / PROVEN LOOP</p>
-        <h2>This is not a slide deck.</h2>
-      </div>
-
-      <p>
-        The first complete FootLabOS capture has already moved through
-        the local stack end to end: secure link, four originals,
-        integrity hashes, trusted ingest, local Client Vault and
-        Flight Sheet.
-      </p>
-
-    </div>
-
-
-    <div class="proof-rail">
-
-      <div>
-        <span>01</span>
-        <strong>Secure link</strong>
-        <small>opaque token / no standing password</small>
-      </div>
-
-      <i>→</i>
-
-      <div>
-        <span>02</span>
-        <strong>4 originals</strong>
-        <small>bilateral capture package</small>
-      </div>
-
-      <i>→</i>
-
-      <div>
-        <span>03</span>
-        <strong>Verify</strong>
-        <small>type / bytes / SHA-256 / manifest</small>
-      </div>
-
-      <i>→</i>
-
-      <div>
-        <span>04</span>
-        <strong>Trusted ingest</strong>
-        <small>provider-operated node</small>
-      </div>
-
-      <i>→</i>
-
-      <div>
-        <span>05</span>
-        <strong>Client Vault</strong>
-        <small>local Synology NAS</small>
-      </div>
-
-      <i>→</i>
-
-      <div class="proof-live">
-        <span>06</span>
-        <strong>Flight Sheet</strong>
-        <small>longitudinal operating record</small>
-      </div>
-
-    </div>
-
-
-    <div class="proof-result">
-
-      <div>
-        <small>CAPTURE</small>
-        <strong>PASS</strong>
-      </div>
-
-      <div>
-        <small>INTEGRITY</small>
-        <strong>VERIFIED</strong>
-      </div>
-
-      <div>
-        <small>INGEST</small>
-        <strong>LOCAL</strong>
-      </div>
-
-      <div>
-        <small>CLIENT RECORD</small>
-        <strong>DURABLE</strong>
       </div>
 
     </div>
@@ -861,41 +627,6 @@
       <p>
         The insert gives us something useful to monitor and improve.
         The membership supports the ongoing relationship.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<section class="section simplicity-section">
-
-  <div class="shell simplicity-grid">
-
-    <div>
-      <p class="eyebrow">THE CLIENT CONTRACT</p>
-      <h2>We absorb the complexity.</h2>
-    </div>
-
-    <div class="simplicity-lines">
-
-      <p>
-        <strong>The client should not need to understand our stack.</strong>
-        They need a phone, a trusted message and about one minute.
-      </p>
-
-      <p>
-        No app because we want an app.
-        No dashboard because we can build one.
-        No extra forms because structured data is easier for us.
-      </p>
-
-      <p class="simplicity-rule">
-        Never make the client do work
-        because it makes our backend easier.
       </p>
 
     </div>
