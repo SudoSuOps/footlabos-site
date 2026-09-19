@@ -1,0 +1,40 @@
+# FootLabOS
+
+> FootLabOS is a local-first longitudinal foot monitoring and personalized bilateral insert service operated by OpenFootLab.
+
+## Core identity
+
+- Brand: FootLabOS
+- Client-facing guide: FLO
+- Operating promise: Continuity by Design
+- Publisher and service provider: OpenFootLab
+- Website: https://footlabos.com/
+- Contact: flo@footlabos.com
+- Phone: +1-561-532-7120
+
+## What FootLabOS does
+
+FootLabOS supports secure one-minute foot check-ins, longitudinal records, personalized bilateral insert manufacturing, human review, adjustments and refreshes over time.
+
+FootLabOS does not replace a physician or licensed care team. Clinical judgment remains with qualified human professionals.
+
+## Primary pages
+
+- Home: https://footlabos.com/
+- FLO Field Notes: https://footlabos.com/field-notes/
+- Check your shoes before your feet go in: https://footlabos.com/field-notes/check-your-shoes/
+- OpenFootLab: https://openfootlab.com/
+
+## Editorial standard
+
+FLO Field Notes provides short educational content built from credible sources and lived experience. Content is designed to help readers notice more, ask better questions and make informed decisions with their licensed care teams. It is not diagnosis or treatment.
+
+## Brand language
+
+- Continuity by Design
+- Humanized as a Service
+- Research by Design
+- Verify. Defend.
+- Small reads. Real signals. Your edge.
+- It's FLO time.
+- Let's FLO.

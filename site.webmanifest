@@ -1,0 +1,16 @@
+{
+  "name": "FootLabOS",
+  "short_name": "FLO",
+  "description": "Continuity by Design.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c1012",
+  "theme_color": "#b7ff67",
+  "icons": [
+    {
+      "src": "/assets/img/footlabos-favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
