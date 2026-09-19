@@ -1890,3 +1890,51 @@ body{
   }
 
 }
+
+
+/* FLO HERO CHECK-IN */
+
+.sms-brand{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:10px;
+}
+
+.sms-brand span{
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  flex:0 0 28px;
+  border-radius:8px;
+  background:var(--green);
+  color:#091006;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.02em;
+}
+
+.sms-brand small{
+  display:block;
+  margin:0;
+  color:#5e696f;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.sms>strong{
+  display:block;
+  color:#111719;
+  font-size:16px;
+  line-height:1.2;
+}
+
+.sms>p{
+  margin:4px 0 0;
+  color:#647078;
+  font-size:11px;
+  line-height:1.4;
+}
