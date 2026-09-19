@@ -34,3 +34,67 @@ revealTargets.forEach(el => {
   el.classList.add("reveal");
   observer.observe(el);
 });
+
+
+/* FLO CONTACT FORM */
+
+const floContactForm = document.querySelector("#floContactForm");
+const floContactSubmit = document.querySelector("#floContactSubmit");
+const floContactStatus = document.querySelector("#floContactStatus");
+
+if (floContactForm && floContactSubmit && floContactStatus) {
+  floContactForm.addEventListener("submit", async event => {
+    event.preventDefault();
+
+    if (!floContactForm.reportValidity()) {
+      return;
+    }
+
+    const formData = new FormData(floContactForm);
+
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      phone: String(formData.get("phone") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+      website: String(formData.get("website") || "").trim()
+    };
+
+    floContactSubmit.disabled = true;
+    floContactSubmit.firstChild.textContent = "Sending to FLO ";
+    floContactStatus.className = "flo-form-status";
+    floContactStatus.textContent = "Sending your message securely…";
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.error || "Your message could not be sent.");
+      }
+
+      floContactForm.reset();
+      floContactStatus.className = "flo-form-status success";
+      floContactStatus.textContent =
+        "FLO received it. A person from OpenFootLab will follow up directly.";
+
+      floContactSubmit.firstChild.textContent = "Received by FLO ";
+    } catch (error) {
+      floContactStatus.className = "flo-form-status error";
+      floContactStatus.textContent =
+        error.message ||
+        "FLO could not send that message. Please email flo@footlabos.com.";
+      floContactSubmit.firstChild.textContent = "Send to FLO ";
+    } finally {
+      floContactSubmit.disabled = false;
+    }
+  });
+}

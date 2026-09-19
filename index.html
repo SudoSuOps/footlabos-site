@@ -1293,54 +1293,125 @@
 
     <div class="contact-copy">
 
-      <p class="eyebrow">OPENFOOTLAB / CONTACT</p>
+      <p class="eyebrow">START WITH FLO</p>
 
-      <h2>
-        Start the conversation.
-      </h2>
+      <h2>Start the conversation.</h2>
 
-      <p>
-        Client questions, referrals, clinician relationships,
-        partnerships or FootLabOS onboarding — reach us directly.
+      <p class="contact-lead">
+        Tell us how to reach you and what brings you to FootLabOS.
+        FLO will confirm your message, then a person from OpenFootLab
+        will follow up directly.
       </p>
 
-    </div>
+      <div class="contact-trust">
+        <span>15-Day Profile Builder starts at no charge</span>
+        <span>No credit card required</span>
+        <span>No automatic billing</span>
+        <span>Human follow-through</span>
+      </div>
 
-
-    <div class="contact-card">
-
-      <a
-        class="contact-action"
-        href="mailto:care@openfootlab.com"
-      >
-        <small>EMAIL</small>
-        <strong>care@openfootlab.com</strong>
-        <span>→</span>
-      </a>
-
-
-      <a
-        class="contact-action"
-        href="tel:+15615327120"
-      >
-        <small>PHONE</small>
-        <strong>561.532.7120</strong>
-        <span>→</span>
-      </a>
-
-
-      <div class="contact-promise">
-        <small>THE CLIENT EXPERIENCE</small>
-
-        <strong>
-          Trusted text or email.
-          Tap the link.
-          Take the photos.
-          Done.
-        </strong>
+      <div class="contact-direct">
+        <a href="mailto:flo@footlabos.com">flo@footlabos.com</a>
+        <a href="tel:+15615327120">561.532.7120</a>
       </div>
 
     </div>
+
+
+    <form class="contact-card flo-form" id="floContactForm">
+
+      <div class="flo-form-heading">
+        <span class="flo-form-mark">FLO</span>
+        <div>
+          <small>FLO / CLIENT INTAKE</small>
+          <strong>Let’s get your profile started.</strong>
+        </div>
+      </div>
+
+      <div class="flo-field">
+        <label for="floName">Name</label>
+        <input
+          id="floName"
+          name="name"
+          type="text"
+          autocomplete="name"
+          minlength="2"
+          maxlength="80"
+          required
+        >
+      </div>
+
+      <div class="flo-field-row">
+
+        <div class="flo-field">
+          <label for="floEmail">Email</label>
+          <input
+            id="floEmail"
+            name="email"
+            type="email"
+            autocomplete="email"
+            maxlength="254"
+            required
+          >
+        </div>
+
+        <div class="flo-field">
+          <label for="floPhone">Phone</label>
+          <input
+            id="floPhone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            maxlength="30"
+            required
+          >
+        </div>
+
+      </div>
+
+      <div class="flo-field">
+        <label for="floMessage">Brief message</label>
+        <textarea
+          id="floMessage"
+          name="message"
+          rows="5"
+          minlength="10"
+          maxlength="1000"
+          placeholder="How can OpenFootLab help?"
+          required
+        ></textarea>
+      </div>
+
+      <div class="flo-honeypot" aria-hidden="true">
+        <label for="floWebsite">Website</label>
+        <input
+          id="floWebsite"
+          name="website"
+          type="text"
+          tabindex="-1"
+          autocomplete="off"
+        >
+      </div>
+
+      <p class="flo-privacy">
+        Please do not include medical records, foot photos, detailed health
+        information or urgent concerns in this form. We will provide a secure
+        next step when we follow up.
+      </p>
+
+      <button class="flo-submit" id="floContactSubmit" type="submit">
+        Send to FLO
+        <span>→</span>
+      </button>
+
+      <p
+        class="flo-form-status"
+        id="floContactStatus"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+    </form>
 
   </div>
 
@@ -1369,46 +1440,10 @@
 
 
 
-<section class="section contact-section">
-
-  <div class="shell contact-grid">
-
-    <div>
-      <p class="eyebrow">CONTACT</p>
-      <h2>Start the conversation.</h2>
-      <p class="contact-lead">
-        Questions, referrals, partnerships or early client onboarding —
-        reach out directly.
-      </p>
-    </div>
-
-    <div class="contact-card">
-      <div class="contact-line">
-        <small>EMAIL</small>
-        <a href="mailto:care@openfootlab.com">care@openfootlab.com</a>
-      </div>
-
-      <div class="contact-line">
-        <small>PHONE</small>
-        <a href="tel:+15615327120">561.532.7120</a>
-      </div>
-
-      <div class="contact-line">
-        <small>CLIENT EXPERIENCE</small>
-        <span>Trusted text or email. Tap the link. Take the photos. Done.</span>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-
-
 <footer>
   <div class="shell footer-grid">
     <span>FootLabOS / <a href="https://openfootlab.com">OpenFootLab</a></span>
-    <span><a href="mailto:care@openfootlab.com">care@openfootlab.com</a></span>
+    <span><a href="mailto:flo@footlabos.com">flo@footlabos.com</a></span>
     <span><a href="tel:+15615327120">561.532.7120</a></span>
     <span>Local-first by design</span>
   </div>
