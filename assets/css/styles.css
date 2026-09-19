@@ -1450,3 +1450,240 @@ body{
   }
 
 }
+
+/* ================================
+   HUMANIZED AS A SERVICE
+   ================================ */
+
+.humanized-section{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(
+      circle at 88% 8%,
+      rgba(183,255,103,.09),
+      transparent 30%
+    ),
+    #0c1012;
+  border-bottom:1px solid var(--line);
+}
+
+.humanized-section::before{
+  content:"HUMAN";
+  position:absolute;
+  right:-.03em;
+  top:-.18em;
+  color:rgba(255,255,255,.018);
+  font-size:clamp(130px,24vw,350px);
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-.08em;
+  pointer-events:none;
+}
+
+.humanized-section .shell{
+  position:relative;
+  z-index:1;
+}
+
+.humanized-intro{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:90px;
+  align-items:end;
+}
+
+.humanized-intro h2{
+  margin:10px 0 0;
+  color:#f4f7f8;
+  font-size:clamp(52px,7vw,96px);
+  line-height:.88;
+  letter-spacing:-.065em;
+}
+
+.humanized-definition{
+  padding-bottom:5px;
+}
+
+.humanized-definition>p{
+  max-width:680px;
+  margin:0;
+  color:#d8dde0;
+  font-size:clamp(18px,2vw,25px);
+  line-height:1.55;
+}
+
+.humanized-definition blockquote{
+  margin:28px 0 0;
+  padding:0 0 0 22px;
+  border-left:3px solid var(--green);
+  color:var(--green);
+  font-size:clamp(20px,2.4vw,31px);
+  font-weight:800;
+  line-height:1.25;
+  letter-spacing:-.025em;
+}
+
+.humanized-promise{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:34px;
+  align-items:start;
+  margin-top:75px;
+  padding:38px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.humanized-promise span{
+  color:var(--green);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+
+.humanized-promise strong{
+  color:#f4f7f8;
+  font-size:clamp(27px,3.8vw,52px);
+  line-height:1.08;
+  letter-spacing:-.045em;
+}
+
+.humanized-principles{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:28px;
+}
+
+.humanized-principles article{
+  min-height:245px;
+  padding:25px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:17px;
+}
+
+.humanized-principles article.mission{
+  grid-column:span 3;
+  min-height:0;
+  background:linear-gradient(
+    110deg,
+    rgba(183,255,103,.14),
+    rgba(183,255,103,.035)
+  );
+  border-color:rgba(183,255,103,.5);
+}
+
+.humanized-principles small{
+  color:var(--green);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+
+.humanized-principles h3{
+  margin:34px 0 10px;
+  color:#f4f7f8;
+  font-size:22px;
+  line-height:1.1;
+  letter-spacing:-.035em;
+}
+
+.humanized-principles .mission h3{
+  margin-top:20px;
+  font-size:clamp(30px,4vw,48px);
+}
+
+.humanized-principles p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.65;
+}
+
+.humanized-bottom-line{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:end;
+  margin-top:70px;
+}
+
+.humanized-bottom-line p{
+  margin:0;
+  color:#f4f7f8;
+  font-size:clamp(23px,3vw,38px);
+  font-weight:800;
+  line-height:1.2;
+  letter-spacing:-.035em;
+}
+
+.humanized-bottom-line p span{
+  display:block;
+  color:var(--green);
+}
+
+.humanized-bottom-line>strong{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+  text-align:right;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+@media(max-width:900px){
+
+  .humanized-intro,
+  .humanized-bottom-line{
+    grid-template-columns:1fr;
+    gap:38px;
+  }
+
+  .humanized-principles{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .humanized-principles article.mission{
+    grid-column:span 2;
+  }
+
+  .humanized-bottom-line>strong{
+    text-align:left;
+  }
+
+}
+
+@media(max-width:620px){
+
+  .humanized-intro h2{
+    font-size:52px;
+  }
+
+  .humanized-promise{
+    grid-template-columns:1fr;
+    gap:16px;
+    margin-top:55px;
+  }
+
+  .humanized-principles{
+    grid-template-columns:1fr;
+  }
+
+  .humanized-principles article,
+  .humanized-principles article.mission{
+    grid-column:auto;
+    min-height:0;
+  }
+
+  .humanized-principles h3{
+    margin-top:24px;
+  }
+
+  .humanized-bottom-line{
+    margin-top:50px;
+  }
+
+}
+
