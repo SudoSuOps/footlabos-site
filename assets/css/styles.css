@@ -1,15 +1,15 @@
 :root{
-  --bg:#0a0d0f;
-  --panel:#111519;
+  --bg:#080c0e;
+  --panel:#11171a;
   --panel2:#161b20;
   --line:rgba(255,255,255,.10);
-  --text:#f5f7f8;
-  --muted:#9da7ae;
+  --text:#f4f7f8;
+  --muted:#94a0a6;
   --green:#b7ff67;
   --blue:#a9dbff;
   --yellow:#ffe77a;
   --paper:#efede5;
-  --ink:#151719;
+  --ink:#080c0e;
   --max:1180px;
 }
 
@@ -36,7 +36,7 @@ a{text-decoration:none;color:inherit}
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(10,13,15,.90);
+  background:rgba(8,12,14,.90);
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
@@ -62,7 +62,7 @@ a{text-decoration:none;color:inherit}
   place-items:center;
   flex:0 0 40px;
   background:var(--green);
-  color:#091006;
+  color:#080c0e;
   border-radius:11px;
   font-family:Arial,Helvetica,sans-serif;
   font-size:12px;

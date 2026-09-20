@@ -1,5 +1,5 @@
 const FROM_EMAIL = "FLO at FootLabOS <flo@footlabos.com>";
-const TO_EMAIL = "flo@footlabos.com";
+const TO_EMAIL = "flo@openfootlab.com";
 
 function response(body, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -169,7 +169,7 @@ Reply directly to this email to contact the client.`,
     return response(
       {
         error:
-          "FLO could not send your message. Please email flo@footlabos.com."
+          "FLO could not send your message. Please email flo@openfootlab.com."
       },
       502
     );
@@ -193,7 +193,8 @@ No credit card is required. There is no automatic billing.
 Please do not send medical records, foot photos or urgent concerns by regular email. We will provide a secure next step when appropriate.
 
 — FLO at FootLabOS
-flo@footlabos.com
+flo@openfootlab.com
+Jupiter, FL · By appointment
 561.532.7120`,
       html:
 `<div style="font-family:Arial,sans-serif;max-width:620px;margin:auto;color:#172025">
@@ -208,7 +209,8 @@ flo@footlabos.com
       Please do not send medical records, foot photos or urgent concerns by regular email. We will provide a secure next step when appropriate.
     </p>
     <p style="margin-top:26px"><strong>— FLO at FootLabOS</strong><br>
-      <a href="mailto:flo@footlabos.com">flo@footlabos.com</a><br>
+      <a href="mailto:flo@openfootlab.com">flo@openfootlab.com</a><br>
+      Jupiter, FL · By appointment<br>
       561.532.7120
     </p>
   </div>

@@ -9,8 +9,9 @@
 - Operating promise: Continuity by Design
 - Publisher and service provider: OpenFootLab
 - Website: https://footlabos.com/
-- Contact: flo@footlabos.com
+- Contact: flo@openfootlab.com
 - Phone: +1-561-532-7120
+- OpenFootLab location: Jupiter, Florida; service and fittings by appointment
 
 ## What FootLabOS does
 
