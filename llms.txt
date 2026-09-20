@@ -25,6 +25,7 @@ FootLabOS does not replace a physician or licensed care team. Clinical judgment 
 - FLO Field Notes: https://footlabos.com/field-notes/
 - Check your shoes before your feet go in: https://footlabos.com/field-notes/check-your-shoes/
 - OpenFootLab: https://openfootlab.com/
+- FLO clinical brochure: https://openfootlab.com/brochure/
 
 ## Editorial standard
 
