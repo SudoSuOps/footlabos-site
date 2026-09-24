@@ -1,6 +1,6 @@
 const FROM_EMAIL = "FLO at FootLabOS <flo@footlabos.com>";
 const TO_EMAIL = "flo@footlabos.com";
-const SMS_CONSENT_VERSION = "2026-09-24-r2";
+const SMS_CONSENT_VERSION = "2026-09-24-r3";
 const SMS_CONSENT_SOURCE = "https://footlabos.com/#contact";
 
 function response(body, status = 200) {
