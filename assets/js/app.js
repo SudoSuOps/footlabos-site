@@ -69,7 +69,7 @@ if (floContactForm && floContactSubmit && floContactStatus) {
       message: String(formData.get("message") || "").trim(),
       website: String(formData.get("website") || "").trim(),
       smsConsent,
-      smsConsentVersion: "2026-09-24-r2"
+      smsConsentVersion: "2026-09-24-r3"
     };
 
     floContactSubmit.disabled = true;
