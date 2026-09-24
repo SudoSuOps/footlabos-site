@@ -1,15 +1,15 @@
 :root{
-  --bg:#0a0d0f;
-  --panel:#111519;
+  --bg:#080c0e;
+  --panel:#11171a;
   --panel2:#161b20;
   --line:rgba(255,255,255,.10);
-  --text:#f5f7f8;
-  --muted:#9da7ae;
+  --text:#f4f7f8;
+  --muted:#94a0a6;
   --green:#b7ff67;
   --blue:#a9dbff;
   --yellow:#ffe77a;
   --paper:#efede5;
-  --ink:#151719;
+  --ink:#080c0e;
   --max:1180px;
 }
 
@@ -36,7 +36,7 @@ a{text-decoration:none;color:inherit}
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(10,13,15,.90);
+  background:rgba(8,12,14,.90);
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
@@ -62,7 +62,7 @@ a{text-decoration:none;color:inherit}
   place-items:center;
   flex:0 0 40px;
   background:var(--green);
-  color:#091006;
+  color:#080c0e;
   border-radius:11px;
   font-family:Arial,Helvetica,sans-serif;
   font-size:12px;
@@ -1941,6 +1941,103 @@ body{
 
 
 /* FLO FIELD NOTES */
+
+/* FLO CLINICAL BROCHURE */
+
+.brochure-preview{
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 10% 5%,rgba(183,255,103,.11),transparent 30%),
+    var(--panel);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.brochure-preview-grid{
+  display:grid;
+  grid-template-columns:minmax(260px,.65fr) 1fr;
+  gap:90px;
+  align-items:center;
+}
+
+.brochure-preview-cover{
+  display:block;
+  max-width:430px;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:19px;
+  background:#080c0e;
+  box-shadow:0 35px 80px rgba(0,0,0,.45);
+  transition:transform .2s ease,border-color .2s ease;
+}
+
+.brochure-preview-cover:hover{
+  transform:translateY(-5px);
+  border-color:var(--green);
+}
+
+.brochure-preview-cover img{
+  display:block;
+  width:100%;
+  border-radius:11px;
+}
+
+.brochure-preview-copy h2{
+  max-width:760px;
+  margin:15px 0 24px;
+  color:var(--text);
+  font-size:clamp(45px,6vw,79px);
+  line-height:.98;
+  letter-spacing:-.06em;
+}
+
+.brochure-preview-lead{
+  max-width:690px;
+  margin:0;
+  color:#cbd3d7;
+  font-size:18px;
+  line-height:1.7;
+}
+
+.brochure-preview-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:28px;
+}
+
+.brochure-preview-points span{
+  padding:7px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--muted);
+  font-size:10px;
+}
+
+.brochure-preview-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-top:32px;
+}
+
+.brochure-file-link{
+  color:var(--text);
+  font-size:13px;
+  font-weight:800;
+}
+
+.brochure-file-link:hover{color:var(--green)}
+
+@media(max-width:900px){
+  .brochure-preview-grid{grid-template-columns:1fr;gap:55px}
+  .brochure-preview-cover{max-width:360px}
+}
+
+@media(max-width:620px){
+  .brochure-preview-actions{align-items:flex-start;flex-direction:column}
+}
 
 .field-notes-preview{
   position:relative;

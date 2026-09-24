@@ -198,7 +198,7 @@ Reply directly to this email to contact the client.`,
     return response(
       {
         error:
-          "FLO could not send your message. Please email flo@footlabos.com."
+          "FLO could not send your message. Please email flo@openfootlab.com."
       },
       502
     );
@@ -223,7 +223,8 @@ Please do not send medical records, foot photos or urgent concerns by regular em
 ${smsConsent ? "You asked to receive FLO customer-care text messages. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help." : ""}
 
 — FLO at FootLabOS
-flo@footlabos.com
+flo@openfootlab.com
+Jupiter, FL · By appointment
 561.532.7120`,
       html:
 `<div style="font-family:Arial,sans-serif;max-width:620px;margin:auto;color:#172025">
@@ -239,7 +240,8 @@ flo@footlabos.com
     </p>
     ${smsConsent ? '<p style="color:#647078;font-size:13px;line-height:1.55;margin-top:14px">You asked to receive FLO customer-care text messages. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help.</p>' : ''}
     <p style="margin-top:26px"><strong>— FLO at FootLabOS</strong><br>
-      <a href="mailto:flo@footlabos.com">flo@footlabos.com</a><br>
+      <a href="mailto:flo@openfootlab.com">flo@openfootlab.com</a><br>
+      Jupiter, FL · By appointment<br>
       561.532.7120
     </p>
   </div>
