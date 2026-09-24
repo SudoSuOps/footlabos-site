@@ -1,5 +1,7 @@
 const FROM_EMAIL = "FLO at FootLabOS <flo@footlabos.com>";
-const TO_EMAIL = "flo@openfootlab.com";
+const TO_EMAIL = "flo@footlabos.com";
+const SMS_CONSENT_VERSION = "2026-09-24";
+const SMS_CONSENT_SOURCE = "https://footlabos.com/#contact";
 
 function response(body, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -119,6 +121,21 @@ export async function onRequest(context) {
     return response({ error: "Please include a brief message." }, 400);
   }
 
+  // SMS consent must be an explicit boolean; every other shape (string,
+  // number, null, array, object, or missing) is rejected generically.
+  // The receipt timestamp and source are generated server-side only.
+  if (body.smsConsent !== true && body.smsConsent !== false) {
+    return response({ error: "The request could not be read." }, 400);
+  }
+
+  if (body.smsConsentVersion !== SMS_CONSENT_VERSION) {
+    return response({ error: "The request could not be read." }, 400);
+  }
+
+  const smsConsent = body.smsConsent === true;
+  const consentCapturedAt = new Date().toISOString();
+  const consentLabel = smsConsent ? "Granted" : "Not granted";
+
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
   const safePhone = escapeHtml(phone);
@@ -143,6 +160,13 @@ Received: ${receivedAt}
 Message:
 ${message}
 
+${consentLabel === "Granted" ? "Customer-care SMS is permitted subject to STOP status." : "Do not send automated SMS. Follow up by email or phone as appropriate."}
+
+SMS consent: ${consentLabel}
+SMS disclosure version: ${SMS_CONSENT_VERSION}
+SMS consent captured: ${consentCapturedAt}
+SMS consent source: ${SMS_CONSENT_SOURCE}
+
 Reply directly to this email to contact the client.`,
       html:
 `<div style="font-family:Arial,sans-serif;max-width:640px;margin:auto;color:#172025">
@@ -156,6 +180,11 @@ Reply directly to this email to contact the client.`,
     <p><strong>Phone:</strong> ${safePhone}</p>
     <p><strong>Received:</strong> ${receivedAt}</p>
     <hr style="border:0;border-top:1px solid #d9dfe2;margin:22px 0">
+    <p style="line-height:1.6"><strong>SMS consent:</strong> ${consentLabel}</p>
+    <p style="line-height:1.6"><strong>SMS disclosure version:</strong> ${SMS_CONSENT_VERSION}</p>
+    <p style="line-height:1.6"><strong>SMS consent captured:</strong> ${consentCapturedAt}</p>
+    <p style="line-height:1.6"><strong>SMS consent source:</strong> ${SMS_CONSENT_SOURCE}</p>
+    <p style="color:#647078;font-size:13px;line-height:1.55;margin-top:6px">${consentLabel === "Granted" ? "Customer-care SMS is permitted subject to STOP status." : "Do not send automated SMS. Follow up by email or phone as appropriate."}</p>
     <p><strong>Brief message</strong></p>
     <p style="line-height:1.6">${safeMessage}</p>
     <p style="color:#647078;font-size:12px;margin-top:24px">
@@ -191,6 +220,7 @@ Thanks, ${name}. Your message reached the OpenFootLab team. A person will follow
 No credit card is required. There is no automatic billing.
 
 Please do not send medical records, foot photos or urgent concerns by regular email. We will provide a secure next step when appropriate.
+${smsConsent ? "You asked to receive FLO customer-care text messages. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help." : ""}
 
 — FLO at FootLabOS
 flo@openfootlab.com
@@ -208,6 +238,7 @@ Jupiter, FL · By appointment
     <p style="color:#647078;font-size:13px;line-height:1.55;margin-top:24px">
       Please do not send medical records, foot photos or urgent concerns by regular email. We will provide a secure next step when appropriate.
     </p>
+    ${smsConsent ? '<p style="color:#647078;font-size:13px;line-height:1.55;margin-top:14px">You asked to receive FLO customer-care text messages. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help.</p>' : ''}
     <p style="margin-top:26px"><strong>— FLO at FootLabOS</strong><br>
       <a href="mailto:flo@openfootlab.com">flo@openfootlab.com</a><br>
       Jupiter, FL · By appointment<br>

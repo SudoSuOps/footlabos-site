@@ -41,6 +41,14 @@ revealTargets.forEach(el => {
 const floContactForm = document.querySelector("#floContactForm");
 const floContactSubmit = document.querySelector("#floContactSubmit");
 const floContactStatus = document.querySelector("#floContactStatus");
+const floSmsConsent = document.querySelector("#floSmsConsent");
+
+/* A failed reset must still restore the consent box to unchecked. */
+if (floContactForm && floSmsConsent) {
+  floContactForm.addEventListener("reset", () => {
+    floSmsConsent.checked = false;
+  });
+}
 
 if (floContactForm && floContactSubmit && floContactStatus) {
   floContactForm.addEventListener("submit", async event => {
@@ -52,12 +60,16 @@ if (floContactForm && floContactSubmit && floContactStatus) {
 
     const formData = new FormData(floContactForm);
 
+    const smsConsent = Boolean(floSmsConsent && floSmsConsent.checked);
+
     const payload = {
       name: String(formData.get("name") || "").trim(),
       email: String(formData.get("email") || "").trim(),
       phone: String(formData.get("phone") || "").trim(),
       message: String(formData.get("message") || "").trim(),
-      website: String(formData.get("website") || "").trim()
+      website: String(formData.get("website") || "").trim(),
+      smsConsent,
+      smsConsentVersion: "2026-09-24"
     };
 
     floContactSubmit.disabled = true;
@@ -82,6 +94,8 @@ if (floContactForm && floContactSubmit && floContactStatus) {
       }
 
       floContactForm.reset();
+      floContactForm.dispatchEvent(new Event("reset"));
+      floSmsConsent.checked = false;
       floContactStatus.className = "flo-form-status success";
       floContactStatus.textContent =
         "FLO received it. A person from OpenFootLab will follow up directly.";
