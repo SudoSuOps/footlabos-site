@@ -2328,3 +2328,99 @@ a.field-note-card:hover{
   }
 
 }
+
+/* FLO SMS CONSENT */
+
+.flo-sms-consent{
+  display:grid;
+  gap:10px;
+  padding:15px 16px;
+  margin:12px 0;
+  border:1px solid #30383d;
+  border-radius:12px;
+  background:#0b0f11;
+}
+
+.flo-sms-optin{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.flo-sms-optin input[type="checkbox"]{
+  flex:0 0 auto;
+  width:20px;
+  height:20px;
+  margin:0;
+  margin-top:1px;
+  padding:0;
+  box-sizing:border-box;
+  accent-color:var(--green);
+  cursor:pointer;
+}
+
+.flo-sms-optin label{
+  flex:1 1 auto;
+  margin:0;
+  cursor:pointer;
+  color:#f4f7f8;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.45;
+}
+
+.flo-sms-disclosure{
+  margin:0;
+  color:#dce2e4;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.flo-sms-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 18px;
+  margin:0;
+}
+
+.flo-sms-links a{
+  color:var(--green);
+  font-size:13px;
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+.flo-sms-optional{
+  margin:0;
+  color:#8f9a9f;
+  font-size:12px;
+  line-height:1.5;
+}
+
+.flo-sms-optin input[type="checkbox"]:focus-visible{
+  outline:2px solid var(--green);
+  outline-offset:2px;
+}
+
+.flo-sms-links a:focus-visible{
+  outline:2px solid var(--green);
+  outline-offset:2px;
+}
+
+@media(max-width:620px){
+
+  .flo-sms-consent{
+    padding:13px 14px;
+    margin:10px 0;
+  }
+
+  .flo-sms-optin label{
+    font-size:13px;
+  }
+
+  .flo-sms-disclosure{
+    font-size:12.5px;
+  }
+
+}
